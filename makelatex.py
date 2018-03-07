@@ -48,7 +48,11 @@ last = "notinanything"  # arbitrary string for substring checking
 # iterate through question list to generate string-formatted question array
 for question in question_list:
     # filter sub-qeustions out of questions list (find_all catches them)
-    if "points" not in question.text or question.text in last:
+    if (
+        ("points" not in question.text and question.text in last)
+        or question.text in last
+       ):
+        print question.text
         continue
     else:
         # add question in string format to questions array
@@ -81,12 +85,10 @@ for i in range(0, len(questions)):
 
     # if a question has parts, print out all the parts
     try:
-        # should catch all questions w/o subquestions
-        sub_questions[i] = sub_questions[i]
 
         # check if subquestion is an empty array, artificially throw error
         if not sub_questions[i]:
-            raise Exception("empty sub-question")
+            raise Exception("empty sub-question array")
 
         # after checking existance, actually write subquestions (list format)
         latexfile.write("\\begin{enumerate}\n")
@@ -100,7 +102,8 @@ for i in range(0, len(questions)):
 
     # print a normal answer field if there aren't subquestions
     except Exception:
-        if "points" in questions[i]:
+        # I check for points and point because Aviv has made this typo before
+        if "points" in questions[i] or "point" in questions[i]:
             latexfile.write("\\begin{myanswer}\nANSWER\n\end{myanswer}\n\n")
 
 # write file footer (close enumerate and document)
