@@ -109,3 +109,5 @@ for i in range(0, len(questions)):
 # write file footer (close enumerate and document)
 latexfile.write("\end{enumerate}\n\end{document}\n")
 latexfile.write("\n%%% mode: latex\n% TeX-master: t\n%%% End:")
+
+print "Output written to hw"+sys.argv[1]+".tex\n"
