@@ -109,4 +109,4 @@ for i in range(0, len(questions)):
 latexfile.write("\end{enumerate}\n\end{document}\n")
 latexfile.write("\n%%% mode: latex\n% TeX-master: t\n%%% End:")
 
-print "Output written to hw"+sys.argv[1]+".tex\n"
+print "Output written to hw"+sys.argv[1]+".tex"
