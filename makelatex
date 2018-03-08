@@ -71,21 +71,23 @@ for question in question_list:
     last = question.text  # allows to check for subquestions in question list
     i += 1  # iterate i
 
-# (DOESNT WORK YET) filter out code snippits and make it look pretty
-# for i in range(0, len(questions)):
-#     for snip in code_snippits:
-#         if snip.text in questions[i]:
-#             print "we found one"
-#             newval = "\\begin{vertbatim}\n"+snip.text+"\n\end{verbatim}\n"
-#             questions[i].replace(snip.text, newval)
-
-# iterate through each question, write to latex file
+# Makes code snippits look nice
 for i in range(0, len(questions)):
     # format questions so that LaTeX doesnt have a seizure
     questions[i] = questions[i].replace("\\", "\\\\")
     questions[i] = questions[i].replace("_", "\_")
     questions[i] = questions[i].replace("&", "\&")
+    for snip in code_snippits:
+        test = snip.text.replace("\\", "\\\\")
+        test = test.replace("_", "\_")
+        test = test.replace("&", "\&")
+        if test in questions[i] or snip.text in questions[i]:
+            newval = "\n\\begin{lstlisting}\n"+snip.text+"\n\end{lstlisting}\n"
+            questions[i] = questions[i].replace(test, newval)
+            code_snippits.remove(snip)
 
+# iterate through each question, write to latex file
+for i in range(0, len(questions)):
     # write question to the file
     latexfile.write("\item "+questions[i].encode("utf8")+"\n")
 
