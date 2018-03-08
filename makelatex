@@ -8,6 +8,13 @@ if len(sys.argv) != 2:
     print "Usage: makelatex <hw number>"
     sys.exit()
 
+# check if input is actually a number
+try:
+    val = int(argv[1])
+except ValueError:
+    print "Usage: makelatex <hw number> (where hw number is actually a number)"
+    sys.exit()
+    
 # scrape raw html from specified hw url
 url = 'https://www.usna.edu/Users/cs/aviv/classes/ic221/s18/hw/'
 url += sys.argv[1]+'/hw.html'
