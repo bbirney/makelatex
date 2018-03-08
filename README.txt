@@ -7,4 +7,3 @@ About: Scrapes URL from Mr. Dr. Prof. Aviv's website, parses HTML and generates 
 Disclaimers:
 - RUN "sudo chmod +x makelatex" AND PUT FILE IN "/bin/" OR ".local/bin" OR "/usr/bin/"
 - MAKE SURE YOU UPDATE YOUR PYTHON LIBRARIES OR IT WON'T WORK
-- I'm working on to handle script snippits (right now they just show up as ugly plaintext)
