@@ -78,6 +78,8 @@ for i in range(0, len(questions)):
     questions[i] = questions[i].replace("_", "\_")
     questions[i] = questions[i].replace("&", "\&")
     for snip in code_snippits:
+        if len(snip.text) < 15:
+            continue
         test = snip.text.replace("\\", "\\\\")
         test = test.replace("_", "\_")
         test = test.replace("&", "\&")
@@ -110,7 +112,7 @@ for i in range(0, len(questions)):
 
     # print a normal answer field if there aren't subquestions
     except Exception:
-        # I check for points and point because Mr. Dr. Prof. Aviv has made this typo before
+        # I check for points and point because Aviv has made this typo before
         if "points" in questions[i] or "point" in questions[i]:
             latexfile.write("\\begin{myanswer}\nANSWER\n\end{myanswer}\n\n")
 
