@@ -7,3 +7,4 @@ About: Scrapes URL from Aviv's website, parses HTML and generates a decent looki
 Disclaimers:
 - RUN "sudo chmod +x makelatex" AND PUT FILE IN "/bin/" OR ".local/bin" OR "/usr/bin/"
 - MAKE SURE YOU UPDATE YOUR PYTHON LIBRARIES OR IT WON'T WORK
+- IF YOU DON'T HAVE A PACKAGE PLS DOWNLOAD
