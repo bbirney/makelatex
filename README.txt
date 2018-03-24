@@ -10,7 +10,8 @@ Installing Python / Dependent Libraries:
   - If you don't have python, then run "sudo apt-get update ; sudo apt-get install python3.6"
 - Installing necessary libraries / other stuff
   - Check you pip version (if you have one) by running "pip --version"
-  - Install pip (if you don't have it) by running "sudo apt-get install python-pip python-dev build-essential"
+  - Install pip (if you don't have it) by running "sudo apt-get install python-pip python-dev 
+    build-essential"
   - Next run "sudo easy_install pip" then "sudo pip install --upgrade virtualenv"
   - To install BS4 (a dependency of the script) run "pip install beautifulsoup4"
 
