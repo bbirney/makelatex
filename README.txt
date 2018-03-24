@@ -12,9 +12,10 @@ Installing Python / Dependent Libraries:
   - Check you pip version (if you have one) by running "pip --version"
   - Install pip (if you don't have it) by running "sudo apt-get install python-pip python-dev build-essential"
   - Next run "sudo easy_install pip" then "sudo pip install --upgrade virtualenv"
-  
+  - To install BS4 (a dependency of the script) run "pip install beautifulsoup4"
 
 Disclaimers:
-1) RUN "sudo chmod +x makelatex" AND PUT FILE IN "/bin/" OR ".local/bin" OR "/usr/bin/"
-2) MAKE SURE YOU UPDATE YOUR PYTHON LIBRARIES OR IT WON'T WORK
-3) IF YOU DON'T HAVE A PACKAGE PLS DOWNLOAD
+- Download the script, and place the actual file wherever you want to run it
+  - You can put it in your bin, which can make life easier
+- Make sure to run "sudo chmod +x makelatex" in your favorite directory
+- If you have any trouble with stuff, feel free to ask me for help (or to google your problem)
