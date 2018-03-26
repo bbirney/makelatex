@@ -2,7 +2,7 @@
 
 <h3>Author: Benjamin Birney</h3>
 
-<h3>Usage: "./makelatex <hw number>"</h3>
+<h3>Usage: "./makelatex \<hw number\>"</h3>
 
 <b>About: Scrapes URL from Aviv's website, parses HTML and generates a decent looking latex document for the HW.</b>
 
