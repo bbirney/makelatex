@@ -19,8 +19,8 @@ About: Scrapes URL from Aviv's website, parses HTML and generates a decent looki
 
 <h3>Disclaimers:</h3>
 - Download the script, and place the actual directory wherever you want to run it
-  (You can put it in your bin, which can make life easier)
-- Make sure to run "sudo chmod +x makelatex" in your favorite directory
-- If you have any trouble with stuff, feel free to ask me for help (or to google your problem)
+  (You can put it in your bin, which can make life easier)<br>
+- Make sure to run "sudo chmod +x makelatex" in your favorite directory<br>
+- If you have any trouble with stuff, feel free to ask me for help (or to google your problem)<br>
 - Also feel free to dig around in the script. The code is commented, so it shouldn't be too 
-  hard to figure out what I'm doing
+  hard to figure out what I'm doing<br>
