@@ -4,7 +4,7 @@ About: Scrapes URL from Aviv's website, parses HTML and generates a decent looki
 Author: Benjamin Birney
 
 <h3>Installing Python / Dependent Libraries:</h3>
-- Install / Update Python
+- Install / Update Python<br>
   - Run "python --version" (You should be running something around 3.6)<br>
   - If you don't have python, then run "sudo apt-get update ; sudo apt-get install python3.6"<br>
 - Installing necessary libraries / other stuff<br>
