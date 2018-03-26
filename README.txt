@@ -16,8 +16,8 @@ Installing Python / Dependent Libraries:
   - To install BS4 (a dependency of the script) run "pip install beautifulsoup4"
 
 Disclaimers:
-- Download the script, and place the actual file wherever you want to run it
-  - You can put it in your bin, which can make life easier
+- Download the script, and place the actual directory wherever you want to run it
+  (You can put it in your bin, which can make life easier)
 - Make sure to run "sudo chmod +x makelatex" in your favorite directory
 - If you have any trouble with stuff, feel free to ask me for help (or to google your problem)
 - Also feel free to dig around in the script. The code is commented, so it shouldn't be too 
