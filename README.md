@@ -2,11 +2,11 @@
 
 <h3>Author: Benjamin Birney</h3>
 
-<h3>Usage: "./makelatex \<hw number\>"</h3>
+<h3>Usage: "./makelatex (hw number)"</h3>
 
-<b>About: Scrapes URL from Aviv's website, parses HTML and generates a decent looking latex document for the HW.</b>
+About: Scrapes URL from Aviv's website, parses HTML and generates a decent looking latex document for the HW.
 
-Installing Python / Dependent Libraries:
+<h3>Installing Python / Dependent Libraries:</h3>
 - Install / Update Python
   - Run "python --version" (You should be running something around 3.6)
   - If you don't have python, then run "sudo apt-get update ; sudo apt-get install python3.6"
@@ -17,7 +17,7 @@ Installing Python / Dependent Libraries:
   - Next run "sudo easy_install pip" then "sudo pip install --upgrade virtualenv"
   - To install BS4 (a dependency of the script) run "pip install beautifulsoup4"
 
-Disclaimers:
+<h3>Disclaimers:</h3>
 - Download the script, and place the actual directory wherever you want to run it
   (You can put it in your bin, which can make life easier)
 - Make sure to run "sudo chmod +x makelatex" in your favorite directory
