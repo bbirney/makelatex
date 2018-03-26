@@ -1,4 +1,4 @@
-#MakeLatex
+<h1>MakeLatex</h1>
 
 ###Author: Benjamin Birney
 
