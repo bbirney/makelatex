@@ -1,10 +1,10 @@
 <h1>MakeLatex</h1>
 
-###Author: Benjamin Birney
+<h3>Author: Benjamin Birney</h3>
 
-###Usage: "./makelatex <hw number>"
+<h3>Usage: "./makelatex <hw number>"</h3>
 
-About: Scrapes URL from Aviv's website, parses HTML and generates a decent looking latex document for the HW.
+<b>About: Scrapes URL from Aviv's website, parses HTML and generates a decent looking latex document for the HW.</b>
 
 Installing Python / Dependent Libraries:
 - Install / Update Python
