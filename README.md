@@ -12,8 +12,7 @@ Author: Benjamin Birney
   - Install pip (if you don't have it) by running "sudo apt-get install python-pip python-dev 
     build-essential"<br>
   - Next run "sudo easy_install pip" then "sudo pip install --upgrade virtualenv"<br>
-  - To install BS4 (a dependency of the script) run "pip install beautifulsoup4"<br>
-
+  - To install BS4 (a dependency of the script) run "pip install beautifulsoup4"
 <h3>Disclaimers:</h3>
 - Download the script & place the actual directory wherever you want to run it (i.e. your bin)<br>
 - Make sure to run "sudo chmod +x makelatex" in your favorite directory<br>
