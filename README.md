@@ -1,7 +1,7 @@
 <h1>MakeLatex</h1>
 <h3>Usage: "./makelatex (hw number)"</h3>
 <b>About:</b> Scrapes URL from Aviv's website, parses HTML and generates a decent looking latex document for the HW. Last I checked, Dr. Aviv uses an earlier implementation of this script to create his own templates.<br>
-<b>Note:</b> These instructions are designed to be readable by those who know nothing about git or python. If you have any questions, reach me at ben.birney@gmail.com (hopefully they make enough sense).<br>
+<b>Note:</b> These instructions are designed to be readable by those who know nothing about git or python. If you have any questions, reach me at ben.birney@gmail.com (though hopefully they make enough sense).<br>
 <b>Author:</b> Benjamin Birney
 
 <h3>Installing Python / Dependent Libraries:</h3>
