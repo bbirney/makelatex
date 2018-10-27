@@ -30,21 +30,22 @@ code_snippits = html.find_all("pre")
 
 # create and write latex file header
 latexfile = open("hw"+sys.argv[1]+".tex", "w")
-l_header = "\documentclass{article}[9pt]\n\usepackage{listings}\n"
-l_header += "\usepackage{fullpage}\n"
-l_header += "\usepackage{textcomp}\n\usepackage{mdframed}\n"
-l_header += "\lstset{ %\nbasicstyle=\\ttfamily\scriptsize,\n"
-l_header += "commentstyle=\\ttfamily\scriptsize\emph,\n"
-l_header += "upquote=true,\nframerule=1.25pt,\nbreaklines=true,\n"
-l_header += "showstringspaces=false,\n"
-l_header += "escapeinside={(*@}{@*)},\nbelowskip=2em,\naboveskip=1em,\n}"
-l_header += "\\newenvironment{answerfont}{\\fontfamily{qhv}\selectfont}{\par}"
-l_header += "\n\n\\newenvironment{myanswer}{\\begin{mdframed}"
-l_header += "\\begin{answerfont}}{\end{answerfont}\end{mdframed}}\n"
-l_header += "\\title{HW "+sys.argv[1]+"}\n\\author{NAME GOES HERE}\n"
-l_header += "\date{DATE GOES HERE}\n\\begin{document}"
-l_header += "\maketitle\n\section*{Questions}\n\label{sec:orgfce6862}"
-l_header += "\n\\begin{enumerate}"
+l_header = "\documentclass{article}[9pt]\n\usepackage{listings}\n" \
+           "\usepackage{fullpage}\n" \
+           "\usepackage{textcomp}\n\usepackage{mdframed}\n" \
+           "\lstset{ %\nbasicstyle=\\ttfamily\scriptsize,\n" \
+           "commentstyle=\\ttfamily\scriptsize\emph,\n" \
+           "upquote=true,\nframerule=1.25pt,\nbreaklines=true,\n" \
+           "showstringspaces=false,\n" \
+           "escapeinside={(*@}{@*)},\nbelowskip=2em,\naboveskip=1em,\n}" \
+           "\\newenvironment{answerfont}{\\fontfamily{qhv}\selectfont}{\par}" \
+           "\n\n\\newenvironment{myanswer}{\\begin{mdframed}" \
+           "\\begin{answerfont}}{\end{answerfont}\end{mdframed}}\n" \
+           "\\title{HW "+sys.argv[1]+"}\n\\author{NAME GOES HERE}\n" \
+           "\date{DATE GOES HERE}\n\\begin{document}" \
+           "\maketitle\n\section*{Questions}\n\label{sec:orgfce6862}" \
+           "\n\\begin{enumerate}"
+
 latexfile.write(l_header+"\n\n\n")
 
 i = 0  # for index values for questions[]
@@ -54,7 +55,7 @@ last = "notinanything"  # arbitrary string for substring checking
 
 # iterate through question list to generate string-formatted question array
 for question in question_list:
-    # filter sub-qeustions out of questions list (find_all catches them)
+    # filter sub-questions out of questions list (find_all catches them)
     if (
         ("points" not in question.text and question.text in last)
         or question.text in last
@@ -117,7 +118,7 @@ for i in range(0, len(questions)):
             latexfile.write("\\begin{myanswer}\nANSWER\n\end{myanswer}\n\n")
 
 # write file footer (close enumerate and document)
-latexfile.write("\end{enumerate}\n\end{document}\n")
-latexfile.write("\n%%% mode: latex\n% TeX-master: t\n%%% End:")
+latexfile.write("\end{enumerate}\n\end{document}\n" +
+                "\n%%% mode: latex\n% TeX-master: t\n%%% End:")
 
 print "Output written to hw"+sys.argv[1]+".tex"
