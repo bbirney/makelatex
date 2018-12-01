@@ -56,34 +56,30 @@ last = "notinanything"  # arbitrary string for substring checking
 # iterate through question list to generate string-formatted question array
 for question in question_list:
     # filter sub-questions out of questions list (find_all catches them)
-    if (
-        ("points" not in question.text and question.text in last)
-        or question.text in last
-       ):
+    if (("points" not in question.text and question.text in last) or question.text in last):
         continue
     else:
         # add question in string format to questions array
         questions[i] = question.text
+
         # remove all subquestions from their respective question
         if "ol" in question.text or "li" in question.text:
             sub_questions[i] = question.find_all("li")
             for j in sub_questions[i]:
                 questions[i] = questions[i].replace(j.text, "")
+
     last = question.text  # allows to check for subquestions in question list
     i += 1  # iterate i
 
 # Makes code snippits look nice
 for i in range(0, len(questions)):
     # format questions so that LaTeX doesnt have a seizure
-    questions[i] = questions[i].replace("\\", "\\\\")
-    questions[i] = questions[i].replace("_", "\_")
-    questions[i] = questions[i].replace("&", "\&")
+    questions[i] = questions[i].replace("\\", "\\\\").replace("_", "\_").replace("&", "\&")
     for snip in code_snippits:
         if len(snip.text) < 15:
             continue
-        test = snip.text.replace("\\", "\\\\")
-        test = test.replace("_", "\_")
-        test = test.replace("&", "\&")
+        
+        test = snip.text.replace("\\", "\\\\").replace("_", "\_").replace("&", "\&")
         if test in questions[i]:
             newval = "\n\\begin{lstlisting}\n"+snip.text+"\n\end{lstlisting}\n"
             questions[i] = questions[i].replace(test, newval)
