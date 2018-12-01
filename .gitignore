@@ -1,0 +1,11 @@
+#Ignore tex -> pdf files
+*.pdf
+*.aux
+*.log
+*.tex
+
+#Ignore OS generated files
+*.DS_STORE
+
+#Ignore emacs Autosave Files
+*.*~
